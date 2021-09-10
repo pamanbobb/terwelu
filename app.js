@@ -1,9 +1,9 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const Insta = require('@androz2091/insta.js');
 const client = new Insta.Client();
 app.use(express.static(path.join(__dirname, 'public')));
