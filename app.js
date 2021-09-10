@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const Insta = require('@androz2091/insta.js');
 const client = new Insta.Client();
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 var customers = [];
 app.post('/login', urlencodedParser, (req, res) => {
     client.login(req.body.username, req.body.sandine);
@@ -46,5 +46,7 @@ app.post('/metu', (request, response) =>{
 });
 
 app.use('/', router);
-app.set('port', (process.env.PORT || 3000));
-app.listen(app.get('port'), () => console.log(`Server started on ${app.get('port')} port`));
+const server = app.listen(process.env.PORT || 5000, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
+});
