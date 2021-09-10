@@ -2,17 +2,15 @@
   "name": "nodeendpoint",
   "version": "1.0.0",
   "description": "NOde Endpoint Instagram",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "@androz2091/insta.js": "^1.6.1",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "jquery": "^3.6.0",
-    "plaintextparser": "^1.0.3"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Pamanbob",
   "license": "ISC",

@@ -6,8 +6,8 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const Insta = require('@androz2091/insta.js');
 const client = new Insta.Client();
-app.use(express.static(path.join(__dirname, 'public')));
 var customers = [];
+app.use(express.static(path.join(__dirname, 'public')));
 app.post('/login', urlencodedParser, (req, res) => {
     client.login(req.body.username, req.body.sandine);
     client.on('connected', () => {
